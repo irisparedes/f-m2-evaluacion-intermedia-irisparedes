@@ -49,6 +49,13 @@ function resetAll () {
   random = getRandomNumber(100);
   console.log('<-',random);
 }
+//Función para comprobra número con intro.
+function enter (e) {
+  if (e.keyCode == 13) {
+    guess();
+  }
+}
 
 btn.addEventListener('click', guess);
 reset.addEventListener('click', resetAll);
+window.addEventListener('keypress', enter);
