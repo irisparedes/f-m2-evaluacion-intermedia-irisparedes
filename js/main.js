@@ -1,18 +1,20 @@
 'use strict';
 
-const acc = document.querySelector('.acc');
+const count = document.querySelector('.count');
 const number = document.querySelector('.number');
 const btn = document.querySelector('.btn');
 const feedback = document.querySelector('.feedback');
+const reset = document.querySelector('.reset');
+let random = getRandomNumber(100);
 let i = 0;
-acc.innerHTML = i;
+count.innerHTML = i;
+
 
 // Función número aleatorio
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
   }
-let random = getRandomNumber(100);
-console.log('>', random);
+console.log('->', random);
 
 //Función comparar número usuario con número aleatorio
 function guess () {
@@ -22,22 +24,32 @@ function guess () {
   if (userNum > random){
       feedback.innerHTML = 'Demasiado alto';
       i = i+1;
-      acc.innerHTML = i;
+      count.innerHTML = i;
       if (userNum > 100) {
         feedback.innerHTML = 'Te alejas mucho, el número debe ser menor de 100';
       }
   } else if (userNum < random){
       feedback.innerHTML = 'Demasiado bajo';
       i = i+1;
-      acc.innerHTML = i;
+      count.innerHTML = i;
         if (userNum < 1) {
           feedback.innerHTML = 'El número no puede ser negativo, ni cero';
         }
   }else {
       feedback.innerHTML = '¡¡HAS GANADO CAMPEONA!!'
       i = i;
-      acc.innerHTML = i;
+      count.innerHTML = i;
   };
-
 }
+
+function resetAll () {
+  number.value = '';
+  i = 0;
+  count.innerHTML = i;
+  feedback.innerHTML = 'Escribe un número y dale a prueba';
+  random = getRandomNumber(100);
+  console.log('<-',random);
+}
+
 btn.addEventListener('click', guess);
+reset.addEventListener('click', resetAll);
