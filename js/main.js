@@ -11,16 +11,17 @@ const feedback = document.querySelector('.feedback');
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
   }
-  console.log('> ' + getRandomNumber(100));
+let random = getRandomNumber(100);
+  console.log(getRandomNumber(100));
 
-number = number.value;
+
  
-const random = getRandomNumber(100);
+
 /*for (let i = 1; i < 100; i++) {
     acc[i].addEventListener("click", getRandomNumber); 
   } Sin terminar!!! LO dejo para continuar...*/
 
-btn.addEventListener('click', getRandomNumber);
+function guess () {
 if (number > random){
     feedback.innerHTML = 'Demasiado alto';
     getRandomNumber(100);
@@ -34,5 +35,5 @@ if (number > random){
     acc ++;
 };
 
-
-
+}
+btn.addEventListener('click', getRandomNumber);
