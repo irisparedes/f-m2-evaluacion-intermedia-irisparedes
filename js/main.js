@@ -21,14 +21,18 @@ function guess () {
   console.log('Número generado aleatoriamente', random);
   if (userNum > random){
       feedback.innerHTML = 'Demasiado alto';
-      getRandomNumber(100);
       i = i+1;
       acc.innerHTML = i;
+      if (userNum > 100) {
+        feedback.innerHTML = 'Te alejas mucho, el número debe ser menor de 100';
+      }
   } else if (userNum < random){
       feedback.innerHTML = 'Demasiado bajo';
-      getRandomNumber(100);
       i = i+1;
       acc.innerHTML = i;
+        if (userNum < 1) {
+          feedback.innerHTML = 'El número no puede ser negativo, ni cero';
+        }
   }else {
       feedback.innerHTML = '¡¡HAS GANADO CAMPEONA!!'
       i = i;
