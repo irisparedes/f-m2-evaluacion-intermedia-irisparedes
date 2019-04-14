@@ -12,7 +12,7 @@ function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
   }
 let random = getRandomNumber(100);
-  console.log(getRandomNumber(100));
+console.log('>', random);
 
 //Función comparar número usuario con número aleatorio
  function guess () {
