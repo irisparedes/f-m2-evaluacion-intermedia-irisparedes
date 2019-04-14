@@ -14,26 +14,23 @@ function getRandomNumber(max) {
 let random = getRandomNumber(100);
   console.log(getRandomNumber(100));
 
-
- 
-
-/*for (let i = 1; i < 100; i++) {
-    acc[i].addEventListener("click", getRandomNumber); 
-  } Sin terminar!!! LO dejo para continuar...*/
-
-function guess () {
-if (number > random){
-    feedback.innerHTML = 'Demasiado alto';
-    getRandomNumber(100);
-    acc ++;
-} else if (number < random){
-    feedback.innerHTML = 'Demasiado alto';
-    getRandomNumber(100);
-    acc ++;
-}else {
-    feedback.innerHTML = '¡¡HAS GANADO CAMPEONA!!'
-    acc ++;
-};
+//Función comparar número usuario con número aleatorio
+ function guess () {
+  const userNum = parseInt(number.value);
+  console.log('Número escogido por el usuario', userNum);
+  console.log('Número generado aleatoriamente', random);
+  if (userNum > random){
+      feedback.innerHTML = 'Demasiado alto';
+      getRandomNumber(100);
+      acc ++;
+  } else if (userNum < random){
+      feedback.innerHTML = 'Demasiado bajo';
+      getRandomNumber(100);
+      acc ++;
+  }else {
+      feedback.innerHTML = '¡¡HAS GANADO CAMPEONA!!'
+      acc ++;
+  };
 
 }
-btn.addEventListener('click', getRandomNumber);
+btn.addEventListener('click', guess);
