@@ -1,3 +1,70 @@
 body {
-   
+    background: #7f8387b3;
+    font-family: sans-serif;
+}
+.page {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.game__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 100px;
+}
+.number {
+    margin: 20px 0 20px 0;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 220px;
+}
+.btn {
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    margin-right: 5px;
+    background-color: darkcyan;
+    color: white;
+    font-size: 18px;
+}
+.reset {
+    width: 50%;
+    border-radius: 10px;
+    margin-left: 5px;
+    background-color: darkcyan;
+    color: white;
+    font-size: 18px; 
+}
+
+.count {
+    color: red;
+    font-size: 60px;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+.feedback__text {
+    display:flex;
+    justify-content: center;
+    border: solid 2px blue;
+    color: blue;
+    font-size: 25px;
+    margin-left: 80px;
+    margin-right: 80px;
+
+    
+
 }

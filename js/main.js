@@ -9,7 +9,6 @@ let random = getRandomNumber(100);
 let i = 0;
 count.innerHTML = i;
 
-
 // Función número aleatorio
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
@@ -41,12 +40,12 @@ function guess () {
       count.innerHTML = i;
   };
 }
-
+ //Función para resetear el juego
 function resetAll () {
   number.value = '';
   i = 0;
   count.innerHTML = i;
-  feedback.innerHTML = 'Escribe un número y dale a prueba';
+  feedback.innerHTML = 'Escribe un número y dale a Prueba';
   random = getRandomNumber(100);
   console.log('<-',random);
 }
